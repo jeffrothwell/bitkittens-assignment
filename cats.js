@@ -12,11 +12,12 @@ document.addEventListener('DOMContentLoaded', function(){
       document.querySelectorAll('.cat-box').forEach(function(box){
         box.innerHTML = "";
       });
-      // now place each cat image in a div 
+      // now place each cat image in a div
       for (var i = 0; i < responseData.cats.length; i++) {
         var imgURL = responseData.cats[i].photo;
         imgEl = document.createElement('img');
         imgEl.src = imgURL
+        imgEl.alt = "Photo of " + responseData.cats[i].name;
         document.querySelector('#cat' + (i + 1)).appendChild(imgEl);
       }
     })
