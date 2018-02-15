@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function(){
         imgEl = document.createElement('img');
         imgEl.src = imgURL
         imgEl.alt = "Photo of " + responseData.cats[i].name;
+        imgEl.title = "" + responseData.cats[i].name;
         document.querySelector('#cat' + (i + 1)).appendChild(imgEl);
       }
     })
